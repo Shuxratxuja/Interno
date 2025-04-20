@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .fc {
+                @apply flex justify-center items-center;
+            }
+        }
+        @theme {
+            --color-pri: #CDA274;
+            --color-sec: #292F36;
+            --color-th: #F4F0EC;
+            --color-f: #4D5053;
+            --font-dm: "DM Serif Display";
+            --font-j: "Jost";
+        }
+        .form-control {
+        position: relative;
+        margin: 20px 0 40px;
+        width: 378px;
+        }
+
+        .form-control input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px #4D5053 solid;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        color: #4D5053;
+        }
+
+        .form-control input:focus,
+        .form-control input:valid {
+        outline: 0;
+        border-bottom-color: #4D5053;
+        }
+
+        .form-control label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        pointer-events: none;
+        }
+
+        .form-control label span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        color: #4D5053;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .form-control input:focus+label span,
+        .form-control input:valid+label span {
+        color: #4D5053;
+        transform: translateY(-30px);
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translatey(0); }
+        }
+        main {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+        .checkbox-wrapper-30 .checkbox {
+            --bg: #fff;
+            --brdr: #CDA274;
+            --brdr-actv: #CDA274;
+            --brdr-hovr: #CDA274;
+            --dur: calc((var(--size, 2)/2) * 0.6s);
+            display: inline-block;
+            width: calc(var(--size, 1) * 22px);
+            position: relative;
+        }
+        .checkbox-wrapper-30 .checkbox:after {
+            content: "";
+            width: 100%;
+            padding-top: 100%;
+            display: block;
+        }
+        .checkbox-wrapper-30 .checkbox > * {
+            position: absolute;
+        }
+        .checkbox-wrapper-30 .checkbox input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -webkit-tap-highlight-color: transparent;
+            cursor: pointer;
+            background-color: var(--bg);
+            border-radius: calc(var(--size, 1) * 4px);
+            border: calc(var(--newBrdr, var(--size, 1)) * 1px) solid;
+            color: var(--newBrdrClr, var(--brdr));
+            outline: none;
+            margin: 0;
+            padding: 0;
+            transition: all calc(var(--dur) / 3) linear;
+        }
+        .checkbox-wrapper-30 .checkbox input:hover,
+        .checkbox-wrapper-30 .checkbox input:checked {
+            --newBrdr: calc(var(--size, 1) * 2);
+        }
+        .checkbox-wrapper-30 .checkbox input:hover {
+            --newBrdrClr: var(--brdr-hovr);
+        }
+        .checkbox-wrapper-30 .checkbox input:checked {
+            --newBrdrClr: var(--brdr-actv);
+            transition-delay: calc(var(--dur) /1.3);
+        }
+        .checkbox-wrapper-30 .checkbox input:checked + svg {
+            --dashArray: 16 93;
+            --dashOffset: 109;
+        }
+        .checkbox-wrapper-30 .checkbox svg {
+            fill: none;
+            left: 0;
+            pointer-events: none;
+            stroke: var(--stroke, var(--border-active));
+            stroke-dasharray: var(--dashArray, 93);
+            stroke-dashoffset: var(--dashOffset, 94);
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2px;
+            top: 0;
+            transition: stroke-dasharray var(--dur), stroke-dashoffset var(--dur);
+        }
+        .checkbox-wrapper-30 .checkbox svg,
+        .checkbox-wrapper-30 .checkbox input {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(50px); }
+            100% { opacity: 1; transform: translatey(0); }
+        }
+        
+        main {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+    </style>
+
+</head>
+
+<body class="will-change-transform">
+    <header>
+        <nav class="flex justify-between items-center max-w-[1202px] container mt-0 mb-0 ml-auto mr-auto flex-wrap">
+            <img src="./assets/icons/Logo (1).svg" alt="logo">
+            <ul class="flex gap-8 items-center mt-3 font-normal text-xl text-f ">
+                <a href="./indexsh.html">
+                    <li class="cursor-pointer hover:underline">Home</li>
+                </a>
+                <li class="cursor-pointer hover:underline">Page</li>
+                <li class="cursor-pointer hover:underline">Service</li>
+                <a href="./projects.html">
+                    <li class="cursor-pointer hover:underline">Project</li>
+                </a>
+                <a href="./blogs.html">
+                    <li class="cursor-pointer hover:underline">Blog</li>
+                </a>
+                <li class="cursor-pointer hover:underline">Contact</li>
+                <img class="w-6 h-6 cursor-pointer " src="./assets/icons/Vector (5).svg" alt="logo">
+            </ul>
+        </nav>
+        <div class="mt-11 ml-auto mr-auto container flex flex-wrap">
+            <img src="./assets/images/Banner (1).png" alt="baner">
+        </div>
+    </header>
+    <main>
+        <section class="mt-52 flex justify-between container max-w-[1202px] mb-0 ml-auto mr-auto flex-wrap">
+            <div class="flex flex-col">
+                <div class="flex flex-col w-[800px] gap-5">
+                    <p class="text-sec text-5xl tracking-[2px] font-dm">Let’s Get Solution for Building <br>Construction
+                        Work</p>
+                    <img src="./assets/images/Image (23).png" alt="image">
+                    <p class="mt-6 flex justify-between">
+                        <span class="text-f text-base tracking-[1px]">26 December,2022 </span>
+                        <span class="text-f text-base tracking-[1px]"> Interior / Design / Home / Decore</span>
+                    </p>
+                </div>
+                <div class="w-[800px] flex flex-col gap-12 mt-12">
+                    <p class="text-f text-xl tracking-[0.8px]">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem
+                        vitae
+                        turpmaximus.posuere in.Contrary to
+                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
+                        have
+                        suffered alteration in some form, by injecthumour, or randomised words which don't look even
+                        slightly believable.</p>
+                    <p class="text-f text-xl tracking-[0.8px]">
+                        Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend
+                        to
+                        repeat predefined chunks as necessary.
+                    </p>
+                </div>
+                <div class="w-[800px] h-[268px] bg-th rounded-[50px] mt-9 ">
+                    <div class="flex flex-col justify-center items-center mb-20 ">
+                        <p
+                            class="font-dm italic text-pri text-[200px] leading-[250px] tracking-[2px] text-center relative top-[-110px] ">
+                            ,,</p>
+                        <p class="font-dm text-pri italic text-2xl tracking-[2px] text-center mt-[-100px]">
+                            <span class="text-center">The details are not the details.</span><br>
+                            <span class="text-center">They make the design.</span>
+                        </p>
+                    </div>
+                </div>
+                <div class=" flex flex-col gap-5 mt-7">
+                    <p class="font-dm text-5xl tracking-[2px] text-sec">Design sprints are great</p>
+                    <p class="text-xl text-f tracking-[0.8px] w-[800px]">Lorem ipsum dolor sit amet, adipiscing Aliquam
+                        eu
+                        sem vitae turpmaximus.posuere in.Contrary to
+                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
+                        have
+                        suffered.</p>
+                </div>
+                <div class="mt-6 flex flex-col gap-8">
+                    <div class="flex gap-3">
+                        <span class="font-dm text-xl text-pri ">1</span>
+                        <span class="text-f text-xl tracking-[1px] w-[750px]">Contrary to popular belief.There are many
+                            variations of passages of Lorem Ipsum available, but the majority have suffered.</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="font-dm text-xl text-pri ">2</span>
+                        <span class="text-f text-xl tracking-[1px] w-[750px]">Contrary to popular belief.There are many
+                            variations of passages of Lorem Ipsum available, but the majority have suffered.</span>
+                    </div>
+                    <div class="flex gap-3">
+                        <span class="font-dm text-xl text-pri ">3</span>
+                        <span class="text-f text-xl tracking-[1px] w-[750px]">Contrary to popular belief.There are many
+                            variations of passages of Lorem Ipsum available, but the majority have suffered.</span>
+                    </div>
+                </div>
+                <div class="mt-11">
+                    <img src="./assets/images/Image (24).png" alt="image">
+                    <p class="text-f text-xl tracking-[0.8px] w-[800px] mt-9">Lorem ipsum dolor sit amet, adipiscing
+                        Aliquam
+                        eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of
+                        passages
+                        of Lorem Ipsum available, but the majority have suffered.</p>
+                </div>
+                <div class="flex justify-between w-[800px] mt-28">
+                    <div class="fc gap-5 ">
+                        <p class="font-dm text-xl">Tags</p>
+                        <button
+                            class="w-[108px] h-[50px] cursor-pointer bg-th rounded-[10px] text-lg hover:text-white text-sec tracking-[1px] fc hover:bg-sec transition-all hover:scale-110 active:scale-100">Kitchan</button>
+                        <button
+                            class="w-[108px] h-[50px] cursor-pointer bg-th rounded-[10px] text-lg tracking-[1px] fc text-sec hover:text-white hover:bg-sec transition-all hover:scale-110 active:scale-100">Bedroom</button>
+                    </div>
+                    <div class="fc gap-14">
+                        <img src="./assets/icons/fec.svg"
+                            class="cursor-pointer hover:scale-110 active:scale-100 transition-all" alt="fecebok">
+                        <img src="./assets/icons/tw.svg"
+                            class="cursor-pointer hover:scale-110 active:scale-100 transition-all" alt="twiter">
+                        <img src="./assets/icons/lin.svg"
+                            class="cursor-pointer hover:scale-110 active:scale-100 transition-all" alt="linked">
+                        <img src="./assets/icons/ins.svg"
+                            class="cursor-pointer hover:scale-110 active:scale-100 transition-all" alt="instagram">
+                    </div>
+                </div>
+                <div class="w-[800px] mt-24">
+                    <p class="text-2xl tracking-[1px] font-dm text-sec">Leave a Reply</p>
+                    <div class="flex justify-between">
+                        <div class="form-control">
+                            <input type="value" required="">
+                            <label>
+                                <span style="transition-delay:0ms">N</span><span
+                                    style="transition-delay:100ms">a</span><span
+                                    style="transition-delay:150ms">m</span><span style="transition-delay:200ms">e</span>
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <input type="value" required="">
+                            <label>
+                                <span style="transition-delay:0ms">E</span><span
+                                    style="transition-delay:100ms">m</span><span
+                                    style="transition-delay:150ms">a</span><span
+                                    style="transition-delay:200ms">i</span><span style="transition-delay:250ms">l</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="flex justify-between">
+                        <div class="form-control">
+                            <input type="value" required="">
+                            <label>
+                                <span style="transition-delay:0ms">W</span><span
+                                    style="transition-delay:100ms">e</span><span
+                                    style="transition-delay:150ms">b</span><span
+                                    style="transition-delay:200ms">s</span><span
+                                    style="transition-delay:250ms">i</span><span
+                                    style="transition-delay:300ms">t</span><span style="transition-delay:350ms">e</span>
+                            </label>
+                        </div>
+                        <div class="form-control">
+                            <input type="value" required="">
+                            <label>
+                                <span style="transition-delay:0ms">P</span><span
+                                    style="transition-delay:100ms">h</span><span
+                                    style="transition-delay:150ms">o</span><span
+                                    style="transition-delay:200ms">n</span><span style="transition-delay:300ms">e</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <textarea class="outline-none w-full resize-none text-xl text-black border-b-2 min-w-100 h-[174px] "
+                        placeholder="Hello Iam Interested in.." name="" id=""></textarea>
+                </div>
+                <div class="flex w-[800px] items-center gap-3 mt-9">
+                    <div class="checkbox-wrapper-30">
+                        <span class="checkbox">
+                            <input type="checkbox" />
+                            <svg>
+                                <use xlink:href="#checkbox-30" class="checkbox"></use>
+                            </svg>
+                        </span>
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display:none" class="stroke-[#CDA274]">
+                            <symbol id="checkbox-30" viewBox="0 0 22 22">
+                                <path fill="none" stroke="currentColor"
+                                    d="M5.5,11.3L9,14.8L20.2,3.3l0,0c-0.5-1-1.5-1.8-2.7-1.8h-13c-1.7,0-3,1.3-3,3v13c0,1.7,1.3,3,3,3h13 c1.7,0,3-1.3,3-3v-13c0-0.4-0.1-0.8-0.3-1.2" />
+                            </symbol>
+                        </svg>
+                    </div>
+                    <p class="text-pri tracking-[1px] text-lg mb-2">Save my name, email, and website in this browser for
+                        the next time I comment.</p>
+                </div>
+                <div
+                    class="group w-[220px] h-[75px] bg-sec hover:bg-[#3a444f] cursor-pointer transition-all rounded-[18px] fc mt-16">
+                    <button class="fc gap-2 cursor-pointer">
+                        <p class="font-semibold text-lg text-white">Send Now</p> <img
+                            class="group-hover:translate-x-5 transition-all" src="./assets/icons/Vector (6).svg"
+                            alt="icon">
+                    </button>
+                </div>
+            </div>
+            <div class=" flex flex-col">
+                <div class="w-[344px] h-[102px] bg-th rounded-[20px] flex justify-around items-center">
+                    <input type="text" placeholder="Search" class="outline-none text-xl "> <img
+                        src="./assets/icons/Vector (9).svg" alt="icon">
+                </div>
+                <div class="w-[345px] mt-12">
+                    <p class="font-dm text-2xl tracking-[2px] text-sec">Latest News</p>
+                    <div class="h-[105px] flex flex-col mt-8">
+                        <p class="font-dm text-xl tracking-[2px] text-sec">We Focus On Comfort <br>
+                            And Gorgeous</p>
+                        <p class="text-base tracking-[1px] text-f flex justify-end mt-2">06/02/2020</p>
+                        <div class="w-[345px] h-[1px] bg-pri mt-1"></div>
+                    </div>
+                    <div class="h-[105px] flex flex-col mt-8">
+                        <p class="font-dm text-xl tracking-[2px] text-sec">We Focus On Comfort <br>
+                            And Gorgeous</p>
+                        <p class="text-base tracking-[1px] text-f flex justify-end mt-2">06/02/2020</p>
+                        <div class="w-[345px] h-[0.6px] bg-pri mt-1"></div>
+                    </div>
+                    <div class="h-[105px] flex flex-col mt-8">
+                        <p class="font-dm text-xl tracking-[2px] text-sec">We Focus On Comfort <br>
+                            And Gorgeous</p>
+                        <p class="text-base tracking-[1px] text-f flex justify-end mt-2">06/02/2020</p>
+                        <div class="w-[345px] h-[1px] bg-pri mt-1"></div>
+                    </div>
+                </div>
+                <div class="mt-12 w-[344px] h-[380px] bg-th rounded-[20px]">
+                    <div class="pt-7 pl-8">
+                        <p class="text-2xl text-sec font-dm tracking-[2px]">Categories</p>
+                        <div class="mt-5">
+                            <p class="text-xl text-f tracking-[1px]">Decoration</p>
+                            <div class="mt-6 w-[278px] h-[1px] bg-pri"></div>
+                        </div>
+                        <div class="mt-6">
+                            <p class="text-xl text-f tracking-[1px]">Door Windows</p>
+                            <div class="mt-6 w-[278px] h-[1px] bg-pri"></div>
+                        </div>
+                        <div class="mt-6">
+                            <p class="text-xl text-f tracking-[1px]">Home Land</p>
+                            <div class="mt-6 w-[278px] h-[0.6px] bg-pri"></div>
+                        </div>
+                        <div class="mt-6">
+                            <p class="text-xl text-f tracking-[1px]">Roof Installation</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12">
+                    <p class="text-2xl text-sec font-dm">Tags</p>
+                    <div class="w-[335px] flex flex-col gap-3 mt-6">
+                        <div class="flex gap-3">
+                            <button
+                                class="w-[120px] h-[42px] bg-th rounded-[10px] hover:bg-sec text-sec hover:scale-110 active:scale-100 hover:text-white transition-all cursor-pointer">Kitchen</button>
+                            <button
+                                class="w-[132px] h-[42px] bg-th rounded-[10px] hover:bg-sec text-sec hover:scale-110 active:scale-100 hover:text-white transition-all cursor-pointer">Bedroom</button>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="w-[126px] h-[42px] bg-th rounded-[10px] hover:bg-sec text-sec hover:scale-110 active:scale-100 hover:text-white transition-all cursor-pointer">Building</button>
+                            <button
+                                class="w-[156px] h-[42px] bg-th rounded-[10px] hover:bg-sec text-sec hover:scale-110 active:scale-100 hover:text-white transition-all cursor-pointer">Architecture</button>
+                        </div>
+                        <div class="flex gap-3">
+                            <button
+                                class="w-[193px] h-[42px] bg-th rounded-[10px] hover:bg-sec text-sec hover:scale-110 active:scale-100 hover:text-white transition-all cursor-pointer">Kitchen
+                                Planning</button>
+                            <button
+                                class="w-[132px] h-[42px] bg-th rounded-[10px] hover:bg-sec text-sec hover:scale-110 active:scale-100 hover:text-white transition-all cursor-pointer">Bedroom</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>  
+    </main>
+    <footer>
+        <div class="max-w-[1200px] mt-36 ml-auto mr-auto flex container flex-wrap">
+            <div>
+                <img src="./assets/icons/Logo (1).svg" alt="logo">
+                <p class="text-xl text-[#4D5053] pt-5">It is a long established fact that a reader <br> will be
+                    distracted lookings.</p>
+                <div class="flex gap-14 mt-7">
+                    <img class="cursor-pointer hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/fec.svg" alt="fecebok">
+                    <img class="cursor-pointer  hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/tw.svg" alt="twiter">
+                    <img class="cursor-pointer  hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/lin.svg" alt="linked">
+                    <img class="cursor-pointer hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/ins.svg" alt="instagram">
+                </div>
+            </div>
+            <div class="flex-col ml-28">
+                <p class="font-dm font-normal text-[#292F36] text-2xl">Pages</p><br>
+                <div class="flex-col gap-12 text-[#4D5053] text-xl tracking-[1px]">
+                    <p class="mt-3 cursor-pointer hover:underline">Our Projects</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">About Us</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Our Team</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Contact Us</p> <br>
+                    <p class="mt-3 cursor-pointer hover:underline">Services</p>
+                </div>
+            </div>
+            <div class="flex-col ml-28">
+                <p class="font-dm font-normal text-[#292F36] text-2xl">Services</p><br>
+                <div class="flex-col gap-5 text-[#4D5053] text-xl tracking-[1px]">
+                    <p class="mt-3 cursor-pointer hover:underline">Kitchan</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Living Area</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Bathroom</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Dinning Hall</p> <br>
+                    <p class="mt-3 cursor-pointer hover:underline">Bedroom</p>
+                </div>
+            </div>
+            <div class="flex-col ml-28">
+                <p class="font-dm font-normal text-[#292F36] text-2xl">Contact</p><br>
+                <div class="flex-col gap-5 text-[#4D5053] text-xl tracking-[1px]">
+                    <p class="mt-3 ">55 East Birchwood Ave. <br> Brooklyn, New York 11201</p>
+                    <p class="mt-3 cursor-pointer hover:underline">contact@interno.com</p>
+                    <p class="mt-3 cursor-pointer hover:underline">(123) 456 - 7890</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-44 text-center">
+            <p class="text-[#4D5053] text-xl tracking-[1px]">Copyright © Interno | Designed by Victorflow Templates -
+                Powered by Webflow</p>
+        </div>
+    </footer>
+</body>
+
+</html>

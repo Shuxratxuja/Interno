@@ -1,0 +1,450 @@
+     <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <title>Shuxrat</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        @theme {
+            --color-pri: #CDA274;
+            --color-sec: #292F36;
+            --color-th: #F4F0EC;
+            --color-f: #4D5053;
+            --font-dm: "DM Serif Display";
+            --font-j: "Jost";
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translatey(0);
+            }
+        }
+        main {
+            opacity: 0;
+            animation: fadeInUp 1s ease-in-out forwards;
+        }
+    </style>
+</head>
+
+<body class="flex-wrap font-[Jost] will-change-transform">
+    <header class="">
+        <nav class="flex justify-between items-center max-w-[1202px] mt-0 mb-0 ml-auto mr-auto container">
+            <img src="./assets/icons/Logo (1).svg" alt="logo">
+            <ul class="flex gap-8 items-center mt-3 font-normal text-xl text-slate-700 ">
+                <li class="cursor-pointer hover:underline">Home</li>
+                <li class="cursor-pointer hover:underline">Page</li>
+                <li class="cursor-pointer hover:underline">Service</li>
+                <a href="./projects.html">
+                    <li class="cursor-pointer hover:underline">Project</li>
+                </a>
+                <a href="./blogs.html">
+                    <li class="cursor-pointer hover:underline">Blog</li>
+                </a>
+                <li class="cursor-pointer hover:underline">Contact</li>
+                <img class="w-6 h-6 cursor-pointer " src="./assets/icons/Vector (5).svg" alt="logo">
+            </ul>
+        </nav>
+        <div class="mt-14 ml-auto mr-auto container max-w-[1300px]">
+            <img src="./assets/images/Image (25).png" alt="image">
+            <div class="relative bottom-130 left-14">
+                <p class="font-dm font-normal text-6xl mb-5 text-[#292F36] ">Let Your Home <br>Be Unique
+                </p>
+                <p class="font-normal text-2xl text-zinc-700 mb-5">There are many variations of the passages of
+                    <br>lorem Ipsum fromavailable, majority.
+                </p>
+                <p class="font-normal text-2xl text-zinc-700 mb-5">There are many variations of the passages of
+                    <br>lorem Ipsum fromavailable, majority.
+                </p>
+                <div
+                    class="w-56 h-20 bg-[#292F36] rounded-3xl flex justify-center cursor-pointer hover:bg-[#1c2128] transition-all hover:scale-105  active:scale-100">
+                    <button
+                        class="flex justify-center items-center gap-3 text-white font-semibold text-lg cursor-pointer">Get
+                        Started <img class="" src="./assets/icons/Vector (6).svg" alt="icon"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="flex flex-wrap gap-4 container relative top-[-200px] max-w-[1202px] mt-0 mb-0 ml-auto mr-auto">
+            <div class="w-96 h-56 text-center">
+                <p class="font-normal text-2xl font-dm text-[#292F36] ">Project Plan</p>
+                <p class="font-normal text-2xl text-zinc-700 mt-5 tracking-[1px] ">There are many variations of the <br>
+                    passages of
+                    lorem Ipsum from <br> available, majority.</p>
+                <div class="mt-12 ml-26 ">
+                    <button class="flex justify-center items-center hover:underline gap-3 cursor-pointer ">
+                        <p class="font-semibold text-zinc-700 text-lg">Read More</p> <img
+                            src="./assets/icons/Vector (6).svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="w-96 h-56 text-center ">
+                <p class="font-normal text-2xl font-dm text-[#292F36]  ">Interior Work</p>
+                <p class="font-normal text-2xl text-zinc-700 mt-5 tracking-[1px]">There are many variations of the <br>
+                    passages of
+                    lorem Ipsum from <br> available, majority.</p>
+                <div class="mt-12 ml-26 ">
+                    <button class="flex justify-center items-center gap-3 hover:underline cursor-pointer">
+                        <p class="font-semibold text-zinc-700 text-lg">Read More</p> <img
+                            src="./assets/icons/Vector (6).svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div class="w-96 h-56 text-center">
+                <p class="font-normal text-2xl font-dm text-[#292F36] ">Realization</p>
+                <p class="font-normal text-2xl text-zinc-700 mt-5 tracking-[1px]">There are many variations of the <br>
+                    passages of
+                    lorem Ipsum from <br> available, majority.</p>
+                <div class="mt-12 ml-26 ">
+                    <button class="flex justify-center items-center gap-3 cursor-pointer hover:underline ">
+                        <p class="font-semibold text-zinc-700 text-lg">Read More</p> <img
+                            src="./assets/icons/Vector (6).svg" alt="">
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="flex gap-20 max-w-[1202px] container mt-0 mb-0 ml-auto mr-auto">
+            <div class="mt-10">
+                <div>
+                    <div class="font-dm font-normal text-5xl tracking-[2px] text-[#292F36]">
+                        <p class="mb-4">We Create The Art</p>
+                        <p class="mb-4">Of Stylish Living</p>
+                        <p>Stylishly</p>
+                    </div>
+                    <p class="font-normal text-xl text-zinc-700 tracking-[1px] mt-8">It is a long established fact that
+                        a reader will be <br>distracted by the of readable content of a
+                        page <br> when lookings at its layouts the points of using <br>that it has a more-or-less
+                        normal.</p>
+                </div>
+                <div class="flex items-center mt-11">
+                    <img src="./assets/icons/Call Icon.svg" alt="icon">
+                    <div class="ml-4">
+                        <a class="font-bold text-2xl tracking-[1px] text-[#4D5053]" href="#">012345678</a>
+                        <p class="font-normal text-xl text-[#4D5053]">Call Us Anytime</p>
+                    </div>
+                </div>
+                <div
+                    class="w-60 h-20 rounded-2xl bg-[#292F36] cursor-pointer hover:bg-[#1c2128] transition-all flex justify-center items-center mt-12 hover:scale-105  active:scale-100">
+                    <button class="flex items-center gap-3 ">
+                        <p class="text-white font-semibold text-lg ">Get Free Estimate</p> <img
+                            src="./assets/icons/Vector (6).svg" alt="">
+                    </button>
+                </div>
+            </div>
+            <div>
+                <img src="./assets/images/Image (5).png" alt="image">
+            </div>
+        </section>
+        <section
+            class="w-[1200px] h-[680px] bg-[#F4F0EC] rounded-[70px] mt-[200px] flex-col justify-center max-w-[1202px] mb-0 ml-auto mr-auto">
+            <div class="flex-col justify-center items-center text-center pt-20">
+                <p class="font-dm font-normal text-5xl tracking-[2px] mb-4">What the People Thinks</p>
+                <p class="font-dm font-normal text-5xl tracking-[2px]">About Us</p>
+            </div>
+            <div class="flex gap-5 ml-6 mt-12">
+                <div class="w-[370px] h-[340px] bg-white rounded-[30px]">
+                    <div class="flex gap-6 pt-12 pl-9 items-center">
+                        <img src="./assets/icons/Image.svg" alt="icon">
+                        <div>
+                            <p class="font-dm font-normal text-2xl text-[#292F36]">Nattasha Mith</p>
+                            <p class="font-normal text-lg text-[#4D5053]">Sydney, USA</p>
+                        </div>
+                    </div>
+                    <p class="font-normal text-2xl text-[#4D5053] pl-9 pt-6">Lorem Ipsum is simply dummy
+                        text of the typesetting industry.
+                        Ipsum has been.</p>
+                </div>
+                <div class="w-[370px] h-[340px] bg-white rounded-[30px]">
+                    <div class="flex gap-6 pt-12 pl-9 items-center">
+                        <img src="./assets/icons/Image (1).svg" alt="icon">
+                        <div>
+                            <p class="font-dm font-normal text-2xl text-[#292F36]">Raymond Galario</p>
+                            <p class="font-normal text-lg text-[#4D5053]">Sydney, Australia</p>
+                        </div>
+                    </div>
+                    <p class="font-normal text-2xl text-[#4D5053] pl-9 pt-6">Lorem Ipsum is simply dummy
+                        text of the typesetting industry.
+                        Ipsum has been scrambled it
+                        to make a type book.</p>
+                </div>
+                <div class="w-[370px] h-[340px] bg-white rounded-[30px]">
+                    <div class="flex gap-6 pt-12 pl-9 items-center">
+                        <img src="./assets/icons/Image (2).svg" alt="icon">
+                        <div>
+                            <p class="font-dm font-normal text-2xl text-[#292F36]">Benny Roll</p>
+                            <p class="font-normal text-lg text-[#4D5053]">Sydney, New York</p>
+                        </div>
+                    </div>
+                    <p class="font-normal text-2xl text-[#4D5053] pl-9 pt-6">Lorem Ipsum is simply dummy
+                        text of the typesetting industry.
+                        Ipsum has been scrambled.</p>
+                </div>
+            </div>
+        </section>
+        <section class="mt-40 max-w-[1202px] mb-0 ml-auto mr-auto">
+            <div class="flex gap-32">
+                <img src="./assets/icons/01.svg" alt="icon">
+                <img src="./assets/icons/02.svg" alt="icon">
+                <img src="./assets/icons/03.svg" alt="icon">
+                <img src="./assets/icons/04.svg" alt="icon">
+                <img src="./assets/icons/05.svg" alt="icon">
+            </div>
+        </section>
+        <section class="mt-40 max-w-[1202px] mb-0 container ml-auto mr-auto">
+            <div>
+                <p class="font-dm font-normal text-5xl text-[#292F36] text-center tracking-[2px]">Follow
+                    Our Projects</p>
+                <p class="font-normal text-xl text-center mt-2 text-[#4D5053] tracking-[1px]">It is a long established
+                    fact that a reader will be distracted by the of readable <br> content of page lookings at its
+                    layouts points.</p>
+            </div>
+            <div class="flex gap-24 mt-24">
+                <div class="w-[550px]">
+                    <img src="./assets/images/Image (7).png" alt="image">
+                    <div class="flex justify-between mt-6">
+                        <div>
+                            <p class="font-dm font-normal text-2xl text-[#292F36]">Modern Kitchan</p>
+                            <p class="font-normal text-xl text-[#4D5053]">Decor / Artchitecture</p>
+                        </div>
+                        <button
+                            class="hover:scale-125  active:scale-100 bg-[#F4F0EC] w-16 h-16 rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#e6dacf] transition-all"><img
+                                src="./assets/icons/Vector (7).svg" alt="icon"></button>
+                    </div>
+                </div>
+                <div class="w-[550px]">
+                    <img src="./assets/images/Image (8).png" alt="image">
+                    <div class="flex justify-between mt-6">
+                        <div>
+                            <p class="font-dm font-normal text-2xl text-[#292F36]">Modern Kitchan
+                            </p>
+                            <p class="font-normal text-xl text-[#4D5053]">Decor / Artchitecture</p>
+                        </div>
+                        <button
+                            class="hover:scale-125  active:scale-100 bg-[#F4F0EC] w-16 h-16 rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#e6dacf] transition-all"><img
+                                src="./assets/icons/Vector (7).svg" alt="icon"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex gap-24 mt-14">
+                <div class="w-[550px]">
+                    <img src="./assets/images/Image (9).png" alt="image">
+                    <div class="flex justify-between mt-6">
+                        <div>
+                            <p class="font-dm font-normal text-2xl text-[#292F36]">Modern Kitchan</p>
+                            <p class="font-normal text-xl text-[#4D5053]">Decor / Artchitecture</p>
+                        </div>
+                        <button
+                            class="hover:scale-125 active:scale-100 bg-[#F4F0EC] w-16 h-16 rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#e6dacf] transition-all"><img
+                                src="./assets/icons/Vector (7).svg" alt="icon"></button>
+                    </div>
+                </div>
+                <div class="w-[550px]">
+                    <img src="./assets/images/Image (10).png" alt="image">
+                    <div class="flex justify-between mt-6">
+                        <div>
+                            <p class="font-dm font-normal text-2xl text-[#292F36]">Modern Kitchan
+                            </p>
+                            <p class="font-normal text-xl text-[#4D5053]">Decor / Artchitecture</p>
+                        </div>
+                        <button
+                            class="hover:scale-125 active:scale-100 bg-[#F4F0EC] w-16 h-16 rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#e6dacf] transition-all"><img
+                                src="./assets/icons/Vector (7).svg" alt="icon"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section
+            class="max-w-[1519px] bg-[#F4F0EC] h-[458px] mt-40 flex justify-center items-center container mb-0 ml-auto mr-auto">
+            <div class="flex gap-20">
+                <div class="flex gap-14">
+                    <div class="flex gap-4 ">
+                        <div class="flex-col justify-center items-center text-center">
+                            <p class="font-dm text-7xl tracking-[2px] text-[#CDA274]">12</p>
+                            <p class="text-xl text-[#4D5053]">Years Of Experiance</p>
+                        </div>
+                    </div>
+                    <div class="w-[1px] h-32 bg-[#CDA274]"></div>
+                </div>
+                <div class="flex gap-14">
+                    <div class="flex gap-4 ">
+                        <div class="flex-col justify-center items-center text-center">
+                            <p class="font-dm text-7xl tracking-[2px] text-[#CDA274]">85</p>
+                            <p class="text-xl text-[#4D5053]">Success Project</p>
+                        </div>
+                    </div>
+                    <div class="w-[1px] h-32 bg-[#CDA274]"></div>
+                </div>
+                <div class="flex gap-14">
+                    <div class="flex gap-4 ">
+                        <div class="flex-col justify-center items-center text-center">
+                            <p class="font-dm text-7xl tracking-[2px] text-[#CDA274]">15</p>
+                            <p class="text-xl text-[#4D5053]">Active Project</p>
+                        </div>
+                    </div>
+                    <div class="w-[1px] h-32 bg-[#CDA274]"></div>
+                </div>
+                <div class="flex gap-14">
+                    <div class="flex gap-4 ">
+                        <div class="flex-col justify-center items-center text-center">
+                            <p class="font-dm text-7xl tracking-[2px] text-[#CDA274]">95</p>
+                            <p class="text-xl text-[#4D5053]">Happy CUstomers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class=" max-w-[1202px] mt-48 mb-0 ml-auto container mr-auto">
+            <div>
+                <p class="font-dm text-5xl text-[#292F36] tracking-[2px] text-center">Articles & News
+                </p>
+                <p class="text-xl text-[#4D5053] tracking-[1px] text-center mt-4">It is a long established fact that a
+                    reader
+                    will be distracted by the of readable content <br>
+                    of a page when lookings at its layouts the points of using.</p>
+            </div>
+            <div class=" flex gap-7 mt-12">
+                <div
+                    class="group border-gray-200 border w-[382px] h-[522px] bg-white rounded-[60px] hover:bg-[#F4F0EC] transition-all cursor-pointer">
+                    <div class="ml-5 pt-5">
+                        <img src="./assets/images/Image (11).png" alt="image">
+                        <button
+                            class=" hover:scale-125  active:scale-100 w-32 h-10 bg-white text-[#4D5053] text-base relative top-[-60px] left-5 rounded-tr-lg rounded-tl-lg rounded-br-lg cursor-pointer hover:bg-gray-200 transition-all">Kitchan
+                            Design</button>
+                    </div>
+                    <div>
+                        <p class="font-dm text-2xl text-[#292F36] font-semibold mt-[-20px] ml-5">Let’s
+                            Get Solution For <br> Building Construction <br> Work</p>
+                        <div class="flex items-center gap-38 ml-5 pt-5">
+                            <p class="text-base text-[#4D5053]">26 December,2022 </p>
+                            <button
+                                class=" group-hover:bg-white hover:scale-125  active:scale-100 bg-[#F4F0EC] w-12 h-12 rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#e6dacf] transition-all"><img
+                                    src="./assets/icons/Vector (7).svg" alt="icon"></button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group border-gray-200 border w-[382px] h-[522px] bg-white rounded-[60px] hover:bg-[#F4F0EC] transition-all cursor-pointer">
+                    <div class="ml-5 pt-5">
+                        <img src="./assets/images/Image (12).png" alt="image">
+                        <button
+                            class="hover:scale-125  active:scale-100 w-32 h-10 bg-white text-[#4D5053] text-base relative top-[-60px] left-5 rounded-tr-lg rounded-tl-lg rounded-br-lg cursor-pointer hover:bg-gray-200 transition-all">Living
+                            Design</button>
+                    </div>
+                    <div>
+                        <p class="font-dm text-2xl text-[#292F36] font-semibold mt-[-20px] ml-5">Let’s
+                            Get Solution For <br> Building Construction <br> Work</p>
+                        <div class="flex items-center gap-38 ml-5 pt-5">
+                            <p class="text-base text-[#4D5053]">22 December,2022 </p>
+                            <button
+                                class="group-hover:bg-white hover:scale-125  active:scale-100 bg-[#F4F0EC] w-12 h-12 rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#e6dacf] transition-all"><img
+                                    src="./assets/icons/Vector (7).svg" alt="icon"></button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group border-gray-200 border w-[382px] h-[522px] bg-white rounded-[60px] hover:bg-[#F4F0EC] transition-all cursor-pointer">
+                    <div class="ml-5 pt-5">
+                        <img src="./assets/images/Image (13).png" alt="image">
+                        <button
+                            class="hover:scale-125  active:scale-100 btn w-32 h-10 bg-white text-[#4D5053] text-base relative top-[-60px] left-5 rounded-tr-lg rounded-tl-lg rounded-br-lg cursor-pointer hover:bg-gray-200 transition-all">Interior
+                            Design</button>
+                    </div>
+                    <div>
+                        <p class="font-dm text-2xl text-[#292F36] font-semibold mt-[-20px] ml-5">Let’s
+                            Get Solution For <br> Building Construction <br> Work</p>
+                        <div class="flex items-center gap-38 ml-5 pt-5">
+                            <p class="text-base text-[#4D5053]">25 December,2022 </p>
+                            <button
+                                class="group-hover:bg-white hover:scale-125  active:scale-100 bg-[#F4F0EC] w-12 h-12 rounded-[50%] flex justify-center items-center cursor-pointer hover:bg-[#e6dacf] transition-all"><img
+                                    src="./assets/icons/Vector (7).svg" alt="icon"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="max-w-[1200px] h-96 mt-52 mb-0 container ml-auto mr-auto rounded-[70px] bg-[#292F36]">
+            <div class="flex-col justify-center items-center pt-30 text-center">
+                <p class="font-dm font-normal text-white text-5xl">Wanna join the interno?</p>
+                <p class="text-xl text-white tracking-[1px] font-normal pt-3">It is a long established fact will be
+                    distracted.</p>
+                <div
+                    class="w-60 h-20 bg-[#CDA274] rounded-[18px] flex justify-center cursor-pointer drop-shadow-2xl hover:bg-[#b98957] transition-all ml-120 mt-8 hover:scale-105  active:scale-100">
+                    <button class="flex items-center gap-3 cursor-pointer">
+                        <p class="font-semibold text-lg tracking-[1px] text-white">Contact With Us</p> <img
+                            src="./assets/icons/Vector (8).svg" alt="icon">
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="max-w-[1200px] mt-36 ml-auto mr-auto flex ">
+            <div>
+                <img src="./assets/icons/Logo (1).svg" alt="logo">
+                <p class="text-xl text-[#4D5053] pt-5">It is a long established fact that a reader <br> will be
+                    distracted lookings.</p>
+                <div class="flex gap-14 mt-7">
+                    <img class="cursor-pointer hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/fec.svg" alt="fecebok">
+                    <img class="cursor-pointer  hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/tw.svg" alt="twiter">
+                    <img class="cursor-pointer  hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/lin.svg" alt="linked">
+                    <img class="cursor-pointer hover:scale-125 transition-all active:scale-100"
+                        src="./assets/icons/ins.svg" alt="instagram">
+                </div>
+            </div>
+            <div class="flex-col ml-28">
+                <p class="font-dm font-normal text-[#292F36] text-2xl">Pages</p><br>
+                <div class="flex-col gap-12 text-[#4D5053] text-xl tracking-[1px]">
+                    <p class="mt-3 cursor-pointer hover:underline">Our Projects</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">About Us</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Our Team</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Contact Us</p> <br>
+                    <p class="mt-3 cursor-pointer hover:underline">Services</p>
+                </div>
+            </div>
+            <div class="flex-col ml-28">
+                <p class="font-dm font-normal text-[#292F36] text-2xl">Services</p><br>
+                <div class="flex-col gap-5 text-[#4D5053] text-xl tracking-[1px]">
+                    <p class="mt-3 cursor-pointer hover:underline">Kitchan</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Living Area</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Bathroom</p><br>
+                    <p class="mt-3 cursor-pointer hover:underline">Dinning Hall</p> <br>
+                    <p class="mt-3 cursor-pointer hover:underline">Bedroom</p>
+                </div>
+            </div>
+            <div class="flex-col ml-28">
+                <p class="font-dm font-normal text-[#292F36] text-2xl">Contact</p><br>
+                <div class="flex-col gap-5 text-[#4D5053] text-xl tracking-[1px]">
+                    <p class="mt-3 ">55 East Birchwood Ave. <br> Brooklyn, New York 11201</p>
+                    <p class="mt-3 cursor-pointer hover:underline">contact@interno.com</p>
+                    <p class="mt-3 cursor-pointer hover:underline">(123) 456 - 7890</p>
+                </div>
+            </div>
+        </div>
+        <div class="mt-44 text-center">
+            <p class="text-[#4D5053] text-xl tracking-[1px]">Copyright © Interno | Designed by Victorflow Templates -
+                Powered by Webflow</p>
+        </div>
+    </footer>
+</body>
+
+</html>
